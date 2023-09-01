@@ -3,7 +3,6 @@ import random
 # Adivina el numero por la computadora
 
 
-
 def adivina_el_numero_computadora (x):
 
     print("=" * 50)
@@ -28,4 +27,22 @@ def adivina_el_numero_computadora (x):
         # Obtener una respuesta del usuario
 
         respuesta = input(f"Mi prediccion es {prediccion}. Si es muy alta, ingresa (A). "
-                          f"Si es muy baja, ingresa (B). Si es correcta, ingresa (C).").lower()
+                          f"Si es muy baja, ingresa (B). Si es correcta, ingresa (C): ").lower()
+
+        if respuesta == "a":
+            limite_superior = prediccion - 1
+            # Intervalo inicial: [1, 10]
+            # Prediccion: 6
+            # Respuesta: "a"
+            # Intervalo: [1, 5]
+        elif respuesta == "b":
+            limite_inferior = prediccion + 1
+            # Intervalo inicial: [1, 10]
+            # Prediccion: 6
+            # Respuesta: "b"
+            # Intervalo: [7, 10]
+
+    print(f"¡ Siiiii ! La computadora adivinó tu número correctamente: {prediccion}")
+
+
+adivina_el_numero_computadora(10)
